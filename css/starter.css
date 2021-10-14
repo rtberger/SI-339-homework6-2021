@@ -1,12 +1,19 @@
 body{
+    font-family: 'Alegreya Sans SC', serif;
+    background-color: #f1f1f1;
+    background-image: url('/images/concrete_seamless.png');  
     margin: 0;
     padding: 0;
     font-size: 16pt; /* test for this! Make all sizes em or rem */
   }
   
   header{
+    /* part 4/6 (9-10,13)*/
+    display: flex;
+    flex-direction:column;
     background: #fff;
     border-bottom: 3px solid #50C7C7;
+    align-items: center;
   }
   
   h1{
@@ -46,7 +53,6 @@ body{
     border: 2px solid black;
   }
 
-
   .nav_item a{
     padding: 10px;
   }
@@ -58,8 +64,36 @@ body{
             text-decoration-style: dotted;
   }
 
+
+.nav_links a:visited{
+    color:#50C7C7;
+    /* PART 5*/
+}
+
+.nav_links{
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  width: 100%;
+/* PART 6 */
+}
+
+/* part 7 */
+.card > header{
+  background-color: #288080;
+  border: 2px solid #45ADAD;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
   .pricing{
     min-height: 475px;
+  /* part 8 */
+  display:flex;
+  flex-direction:column;
+  align-items:center;
   }
 
   .card {
@@ -67,7 +101,8 @@ body{
     background: #fff;
     border-radius: 7px;
     padding: 0 0 25px 0;
-  
+  /* part 9 */
+    min-width:450px;
   }
 
   .card > ul{
@@ -92,6 +127,9 @@ body{
     font-size: 1em;
   }
   
+
+
+
   .card h3{
     font-size: 4em;
     color: white;
@@ -105,8 +143,30 @@ body{
 
   .gallery{
     min-height: 600px;
+    /* part 10 pt2 */
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
   }
   
+  .gallery > img{
+    /* part 10 */
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+  }
+
+  /* part 11 */
+  .logo{
+    /* width 50px -> 425px */
+    /* opacity 0 -> opacity 1 */
+    animation-name: bounce;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+  }
+
+
   footer{
     background-color: black;
     color: white;
@@ -118,7 +178,46 @@ body{
     .card_big{
         -webkit-transform: scaleY(1.1);
         transform: scaleY(1.1);
-        z-index: -99;
+        z-index: -99;    
   }
+  /* space-between for large screen of header and nav_links */
+    header{
+      /* flex-direction:row; */
+      position:fixed;
+      
+    }
+    .nav_links{
+      flex-direction:row;
+      align-content:space-between;
+
+    }
 }
-  
+/* part 14 */
+  @media screen and (prefers-reduced-motion) {
+    .logo{
+      animation:none;
+    }
+}
+
+/* part 15-20 */
+  @media print {
+    body{
+      background-image: none;
+    }
+    .nav_links{
+      flex-direction:row;
+      /* align-items:space-evenly; */
+    }
+    .pricing{
+      flex-direction:row;
+      align-items:stretch;
+    }
+    .card{
+      border: 2px solid #45ADDD;
+      flex-basis: 250px;
+    }
+    #gallery, .gallery{
+      display:none;
+    }
+    /* thumbs up?? before first list item, after second, before third*/
+}
