@@ -1,7 +1,7 @@
 body{
     font-family: 'Alegreya Sans SC', serif;
     background-color: #f1f1f1;
-    background-image: url('');  
+    background-image: url('/homework6-2021/images/concrete_seamless.png');  
     margin: 0;
     padding: 0;
     font-size: 16pt; /* test for this! Make all sizes em or rem */
@@ -175,34 +175,41 @@ body{
   }
 
   @media screen and (min-width: 850px){
-    header{
+    header:not(div>header){
       flex-direction: row;
       width:100%;
       position: fixed;
-
+      
   }
-    header .nav_links{
-    flex-direction: row;
-    
-    align-content:flex-end;
 
-    justify-content:space-between;
-
+    nav{
+      width: 100%;
   }  
 
+    .nav_links{
+      flex-direction: row;
+      justify-content: flex-end;
+  }
+    div.pricing{
+      width:100%;
+      margin: auto auto;
+      border: auto auto;
+  }
     .pricing{
       flex-direction: row;
-      align-self:center;
-      width:250px;
+      justify-content:center;
   }
+    .card{
+      
+    }
 
     .card_big{
         -webkit-transform: scaleY(1.1);
         transform: scaleY(1.1);
         z-index: -99;    
   }
-  /* space-between for large screen of header and nav_links */
 }
+
 /* part 14 */
   @media screen and (prefers-reduced-motion) {
     .logo{
@@ -213,15 +220,24 @@ body{
 /* part 15-20 */
   @media print {
     body{
+      background-color: #FFFFFF;
       background-image: none;
+    }
+    
+    nav{
+      width:100%;
     }
     .nav_links{
       flex-direction:row;
-      /* align-items:space-evenly; */
+      justify-content: space-evenly;
     }
+
+    /* div{
+
+    } */
     .pricing{
       flex-direction:row;
-      align-items:stretch;
+      align-items:flex-end;
     }
     .card{
       border: 2px solid #45ADDD;
@@ -230,5 +246,12 @@ body{
     #gallery, .gallery{
       display:none;
     }
-    /* thumbs up?? before first list item, after second, before third*/
+
+    div li:nth-child(odd)::before{
+      content:'\1F44D';
+
+    }
+    div li:nth-child(even)::after{
+      content:'\1F44D';
+    }
 }
