@@ -5,6 +5,7 @@ body{
     margin: 0;
     padding: 0;
     font-size: 16pt; /* test for this! Make all sizes em or rem */
+    
   }
   
   header{
@@ -26,6 +27,7 @@ body{
     font-size: 1.5em;
     text-align: center;
     padding: 5px;
+    text-opac
   }
   
   p {
@@ -157,11 +159,20 @@ body{
     width: 300px;
   }
 
+@keyframes logo {
+  from {width:50px;
+  }
+  to {width: 425px;
+  } 
+  from {opacity: 0;
+  }
+  to {opacity: 1;
+  }
+}
+
   /* part 11 */
-  .logo{
-    /* width 50px -> 425px */
-    /* opacity 0 -> opacity 1 */
-    animation-name: bounce;
+  #logo{
+    animation-name: logo;
     animation-duration: 5s;
     animation-iteration-count: 1;
   }
@@ -200,8 +211,9 @@ body{
       justify-content:center;
   }
     .card{
-      
-    }
+      min-width: 250px;
+      flex-basis: 250px;
+  }
 
     .card_big{
         -webkit-transform: scaleY(1.1);
@@ -212,7 +224,7 @@ body{
 
 /* part 14 */
   @media screen and (prefers-reduced-motion) {
-    .logo{
+    #logo{
       animation:none;
     }
 }
@@ -227,22 +239,26 @@ body{
     nav{
       width:100%;
     }
+
     .nav_links{
       flex-direction:row;
       justify-content: space-evenly;
     }
 
-    /* div{
-
-    } */
+    div{
+      min-height:100%;
+    }
     .pricing{
       flex-direction:row;
       align-items:flex-end;
+      justify-content: stretch;
     }
     .card{
       border: 2px solid #45ADDD;
+      min-width: 250px;
       flex-basis: 250px;
     }
+    
     #gallery, .gallery{
       display:none;
     }
@@ -254,4 +270,5 @@ body{
     div li:nth-child(even)::after{
       content:'\1F44D';
     }
+
 }
