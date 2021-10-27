@@ -38,7 +38,7 @@ header{
 }
 
 .pricing{
-    min-height: 475px;
+  /* part 8 */
     display:flex;
     flex-wrap:wrap;
     flex-direction:column;
@@ -77,7 +77,7 @@ header{
     animation-name: logo;
     animation-duration: 5s;
     animation-iteration-count: 1;
-  }
+}
 
 
   @media screen and (min-width: 850px){
@@ -86,31 +86,31 @@ header{
       width:100%;
       position: fixed;
       z-index: 1;
-  }
+}
 
     nav{
       width: 100%;
-  }  
+}  
 
     .nav_links{
       flex-direction: row;
       justify-content: flex-end;
-  }
+}
     div.pricing{
       width:100%;
       margin: auto auto;
       border: auto auto;
-  }
+}
     .pricing{
       flex-wrap: wrap;
       flex-direction: row;
       justify-content: center;
-  }
+}
 
     .card{
       flex-basis: 250px;
       min-width: 250px;
-  }
+}
 }
 
 /* part 14 */
