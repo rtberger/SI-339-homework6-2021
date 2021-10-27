@@ -1,22 +1,11 @@
 body{
-    font-family: 'Alegreya Sans SC', serif;
-    background-color: #f1f1f1;
-    background-image: url('/homework6-2021/images/concrete_seamless.png');  
     margin: 0;
     padding: 0;
     font-size: 16pt; /* test for this! Make all sizes em or rem */
-    
   }
   
   header{
-    /* part 4/6 (9-10,13)*/
-    position: relative;
-    display: flex;
-    flex-direction:column;
-    background: #fff;
     border-bottom: 3px solid #50C7C7;
-    align-items: center;
-    justify-content: center;
   }
   
   h1{
@@ -67,37 +56,8 @@ body{
             text-decoration-style: dotted;
   }
 
-
-.nav_links a:visited{
-    color:#50C7C7;
-    /* PART 5*/
-}
-
-.nav_links{
-  display: flex;
-  flex-direction:column;
-  align-items:center;
-  width: 100%;
-/* PART 6 */
-}
-
-/* part 7 */
-.card > header{
-  background-color: #288080;
-  border: 2px solid #45ADAD;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-top-left-radius: 7px;
-  border-top-right-radius: 7px;
-}
-
 .pricing{
     min-height: 475px;
-  /* part 8 */
-  display:flex;
-  flex-wrap:wrap;
-  flex-direction:column;
-  align-items:center;
   }
 
   .card {
@@ -105,8 +65,6 @@ body{
     background: #fff;
     border-radius: 7px;
     padding: 0 0 25px 0;
-  /* part 9 */
-    min-width:450px;
   }
 
   .card > ul{
@@ -147,36 +105,6 @@ body{
 
   .gallery{
     min-height: 600px;
-    /* part 10 pt2 */
-    display:flex;
-    flex-direction: row;
-    flex-wrap:wrap;
-    justify-content: center;
-  }
-  
-  .gallery > img{
-    /* part 10 */
-    border: 10px solid #50C7C7;
-    margin: 10px;
-    width: 300px;
-  }
-
-@keyframes logo {
-  from {width:50px;
-  }
-  to {width: 425px;
-  } 
-  from {opacity: 0;
-  }
-  to {opacity: 1;
-  }
-}
-
-  /* part 11 */
-  #logo{
-    animation-name: logo;
-    animation-duration: 5s;
-    animation-iteration-count: 1;
   }
 
 
@@ -188,91 +116,9 @@ body{
   }
 
   @media screen and (min-width: 850px){
-    header:not(div>header){
-      flex-direction: row;
-      width:100%;
-      position: fixed;
-      z-index: 1;
-  }
-
-    nav{
-      width: 100%;
-  }  
-
-    .nav_links{
-      flex-direction: row;
-      justify-content: flex-end;
-  }
-    div.pricing{
-      width:100%;
-      margin: auto auto;
-      border: auto auto;
-  }
-    .pricing{
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: center;
-  }
-
-    .card{
-      min-width: 250px;
-      flex-basis: 250px;
-  }
-
     .card_big{
         -webkit-transform: scaleY(1.1);
         transform: scaleY(1.1);
         z-index: -99;    
   }
-}
-
-/* part 14 */
-  @media screen and (prefers-reduced-motion) {
-    #logo{
-      animation:none;
-    }
-}
-
-/* part 15-20 */
-  @media print {
-    body{
-      background-color: #FFFFFF;
-      background-image: none;
-    }
-    
-    nav{
-      width:100%;
-    }
-
-    .nav_links{
-      flex-direction:row;
-      justify-content: space-evenly;
-    }
-
-    div{
-      min-height:100%;
-    }
-    .pricing{
-      flex-direction:row;
-      align-items:flex-end;
-      justify-content: stretch;
-    }
-    .card{
-      border: 2px solid #45ADDD;
-      min-width: 250px;
-      flex-basis: 250px;
-    }
-
-    #gallery, .gallery{
-      display:none;
-    }
-
-    div li:nth-child(odd)::before{
-      content:'\1F44D';
-
-    }
-    div li:nth-child(even)::after{
-      content:'\1F44D';
-    }
-
 }
