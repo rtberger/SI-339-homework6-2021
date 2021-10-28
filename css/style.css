@@ -90,6 +90,9 @@ header{
       position: fixed;
       z-index: 1;
 }
+    h1{
+      padding-top: 80px;
+    }
 
     nav{
       width: 100%;
@@ -125,9 +128,13 @@ header{
 
 /* part 15-20 */
   @media print {
+    #logo{
+      animation:none;
+    }
+
     body{
-      background-color: #FFFFFF;
       background-image: none;
+      background-color: #FFFFFF;
     }
     
     nav{
@@ -142,14 +149,15 @@ header{
     div{
       min-height:100%;
     }
+
     .pricing{
       flex-direction:row;
-      align-items:center;
-      justify-content: stretch;
+      flex-wrap:nowrap;
+      align-self: flex-end;
     }
+
     .card{
       border: 2px solid #45ADDD;
-      min-width: 250px;
       flex-basis: 250px;
     }
 
