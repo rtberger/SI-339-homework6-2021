@@ -85,16 +85,20 @@ header{
       flex-direction: row;
       width:100%;
       position: fixed;
-      justify-content: space-around;
       z-index: 1;
 }
+
+    header{
+      justify-content: space-around;
+}
+
     h1{
       padding-top: 80px;
     }
 
     nav{
       width: 100%;
-}  
+}   
 
     .nav_links{
       flex-direction: row;
